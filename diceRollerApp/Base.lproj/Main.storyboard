@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="diceRollerApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="TpJ-gj-N9Z">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="633"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TTb-eT-fY1" userLabel="topView">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="205.5"/>
+                                        <accessibility key="accessibilityConfiguration" label="topView"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K2b-AV-SQu" userLabel="middleView">
+                                        <rect key="frame" x="0.0" y="213.5" width="375" height="206"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="59Y-F9-8eh">
+                                                <rect key="frame" x="62.5" y="53" width="250.5" height="100"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dice2" translatesAutoresizingMaskIntoConstraints="NO" id="zI2-1Q-QWX">
+                                                        <rect key="frame" x="0.0" y="0.0" width="100.5" height="100"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="100" id="by1-HU-wHU"/>
+                                                            <constraint firstAttribute="width" constant="100.5" id="cYr-ZD-e99"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dice3" translatesAutoresizingMaskIntoConstraints="NO" id="54X-C4-g3o">
+                                                        <rect key="frame" x="150.5" y="0.0" width="100" height="100"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="100" id="ghG-iK-sLh"/>
+                                                            <constraint firstAttribute="height" constant="100" id="wYd-tM-gS3"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <accessibility key="accessibilityConfiguration" label="middleView"/>
+                                        <constraints>
+                                            <constraint firstItem="59Y-F9-8eh" firstAttribute="centerX" secondItem="K2b-AV-SQu" secondAttribute="centerX" id="KRF-OA-HgN"/>
+                                            <constraint firstItem="59Y-F9-8eh" firstAttribute="centerY" secondItem="K2b-AV-SQu" secondAttribute="centerY" id="ojf-Lk-hN5"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lFD-96-cNV" userLabel="bottomView">
+                                        <rect key="frame" x="0.0" y="427.5" width="375" height="205.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lje-cA-ADV">
+                                                <rect key="frame" x="137" y="75" width="101" height="55.5"/>
+                                                <color key="backgroundColor" red="0.1449466163" green="0.14100277380000001" blue="0.33998469720000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="70.5" id="Ji5-29-LNn"/>
+                                                    <constraint firstAttribute="height" constant="55.5" id="Nqa-hl-Qi9"/>
+                                                    <constraint firstAttribute="width" constant="101" id="n47-My-Rjr"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Roll">
+                                                    <backgroundConfiguration key="background"/>
+                                                    <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="22"/>
+                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="rollerButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="STm-CX-4H2"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <accessibility key="accessibilityConfiguration" label="bottomView">
+                                            <bool key="isElement" value="NO"/>
+                                        </accessibility>
+                                        <constraints>
+                                            <constraint firstItem="Lje-cA-ADV" firstAttribute="centerX" secondItem="lFD-96-cNV" secondAttribute="centerX" id="5iE-X8-ykE"/>
+                                            <constraint firstItem="Lje-cA-ADV" firstAttribute="centerY" secondItem="lFD-96-cNV" secondAttribute="centerY" id="NlU-zV-cRo"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.079980315322601497" green="0.077804136447849864" blue="0.18760067654639179" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="TpJ-gj-N9Z" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" constant="-34" id="44Z-YL-Fa8"/>
+                            <constraint firstItem="TpJ-gj-N9Z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="KID-p7-cQu"/>
+                            <constraint firstItem="TpJ-gj-N9Z" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="XJu-sh-oIX"/>
+                            <constraint firstItem="TpJ-gj-N9Z" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="m75-aQ-Aqc"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="leftDiceView" destination="zI2-1Q-QWX" id="7sf-Re-zi7"/>
+                        <outlet property="rightDiceView" destination="54X-C4-g3o" id="1VX-Il-iC5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="17.39130434782609" y="82.366071428571431"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="dice2" width="166.5" height="166.5"/>
+        <image name="dice3" width="166.5" height="166.5"/>
+    </resources>
+</document>
